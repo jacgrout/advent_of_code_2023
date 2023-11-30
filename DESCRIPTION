@@ -6,8 +6,7 @@ Authors@R:
 Description: A template R package that can be used to help you take part in 
     Advent of Code, with an example function and corresponding test file that
     uses 'testthat' package.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
