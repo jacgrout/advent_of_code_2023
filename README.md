@@ -1,18 +1,9 @@
 
 # Advent of Code 2023
 
-<!-- badges: start -->
-[![Project Status: Concept – Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
-<!-- badges: end -->
-
-This is an R version of [YiWen's Advent of Code (AOC) template repository for Python](https://github.com/yiwen-h/aoc_python_template) to help support a Coffee & Coding session, November 2023.
 
 Inspiration is taken from [David Selby's package-based test-driven approach](https://github.com/Selbosh/adventofcode2021) for AOC 2021 and uses [Emil Hvitfeldt's solution](https://github.com/EmilHvitfeldt/rstats-adventofcode) for AOC 2022 as an example (referred to as 'day 00' in this repository).
 
-## Getting set up
-
-1. Please click the 'Use this template' button in this repository, clone the repo, or fork it to your own GitHub account.
-2. Install required packages from CRAN with `install.packages(c("devtools", "testthat", "usethis"))` if not already installed. {devtools} and {usethis} help you develop R packages and {testthat} is a popular testing framework for R.
 
 ## How to use this template
 

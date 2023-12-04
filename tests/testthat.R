@@ -8,5 +8,6 @@
 
 library(testthat)
 library(aoc.tests.demo)
+library(strex)
 
 test_check("aoc.tests.demo")
