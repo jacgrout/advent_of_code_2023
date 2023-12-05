@@ -20,3 +20,9 @@ input <- load_test_data("02")
 solve_day_02(input)
 
 solve_day_02_2(input)
+
+
+input <- load_real_data("02")
+
+
+solve_day_02_2(input)

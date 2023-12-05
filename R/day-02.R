@@ -69,7 +69,6 @@ print(result)
 
 return(result)
 
-
 }
 
 solve_day_02_2 <- function(input) {
@@ -77,11 +76,6 @@ solve_day_02_2 <- function(input) {
   library(stringr)
 
   input_split <- split(input,input)
-  # input_split_game <- str_split(input_split, ":")
-  # input_split_out <- str_split(input_split, ";")
-
-
-
 
   #split the data into a dataframe with colmun one is the game number and column 2 is the rest of the string
   df <- as.data.frame(unlist(input_split))
@@ -100,26 +94,39 @@ solve_day_02_2 <- function(input) {
     mutate(numbs=str_extract_all(string, "\\d+", simplify = TRUE))
 
 
-  colour="red"
-  get_min_number_for_colour <- function(game,maxelementnum,colour){
-
-
-
-#get the minimum value where the colour is red
   gamenum=1
-  i=2
-  #in the loop
-  redmin <- as.numeric(if(df2$words[gamenum,i] == colour ){df2$numbs[gamenum,i]})
-redmin
-#if the result is smaller than the previous result then replace the previous result with this result otherwise leave it
+  i=1
+  min=0
 
-#get the minimum value where the colour is blue
-#bluemin=
+  get_min_number_for_colour <- function(gamenum,maxelementnum,colour){
+    i=1
+    min=0
+# get the number for the colour
+    for (i in 1:maxelementnum){
+  num <- if(df2$words[gamenum,i] == colour ){as.numeric(df2$numbs[gamenum,i])} else {as.numeric(0)}
+#if the result is bigger than the previous result then replace the previous result with this result otherwise leave it
+if(num>min){min=num} else {min=min}
+  i=i+1
+    }
+      return(min)
+    }
 
-#get the minimum value where the colour is green
-  #greenmin=
+
+totalpowers=0
+i=1
+
+for(i in 1:nrow(df2)) {
+
+redmin <- get_min_number_for_colour(i,length(df2$words)/nrow(df2),"red")
+bluemin <- get_min_number_for_colour(i,length(df2$words)/nrow(df2),"blue")
+greenmin <- get_min_number_for_colour(i,length(df2$words)/nrow(df2),"green")
 
 #multiply the three numbers together
-
+power <- redmin*bluemin*greenmin
+totalpowers=totalpowers+power
+i=i+1
 }
+return(totalpowers)
+}
+
 
