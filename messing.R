@@ -15,7 +15,7 @@ solve_day_01_2(load_real_data("01"))
 solve_day_01_2(load_real_data_p2())
 
 
-input <- load_test_data("02")
+input <- load_test_data("03")
 
 solve_day_02(input)
 
